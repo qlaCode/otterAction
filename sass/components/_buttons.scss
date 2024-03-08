@@ -1,0 +1,20 @@
+@use "../variables/colors";
+
+
+.button-primary-inverted {
+    border-radius: 30px;
+    border-style:solid;
+    color: colors.$neutral-light;
+    border-color: colors.$neutral-light;
+    background-color: colors.$primary;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.button-secondary {
+    border-radius: 30px;
+    border-style: none;
+    color: colors.$neutral-light;
+    border-color: colors.$neutral-light;
+    background-color: colors.$secondary;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}

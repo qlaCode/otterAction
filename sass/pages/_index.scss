@@ -1,0 +1,261 @@
+@use "../variables/colors";
+@use "../variables/fonts";
+@use "../components/buttons";
+
+
+
+
+//////////////////////////////// NAV BAR ////////////////////////////////
+navbar {
+    position: fixed;
+    width: 100vw;
+    background-color: colors.$primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    height: 50px;
+}
+
+navbar li {
+    list-style: none;
+}
+
+.nav-items {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end ;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: colors.$neutral-light;
+    height: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+.nav-item:hover {
+    background-color: colors.$neutral-light;
+    a {
+        color: colors.$primary;
+    }
+}
+
+.nav-item:active {
+    background-color: colors.$neutral-light;
+}
+
+a:link {
+    text-decoration: none;
+    color: colors.$neutral-light;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: colors.$neutral-light;
+}
+  
+a:hover {
+     color: colors.$primary;
+ }
+  
+a:active {
+    background-color: colors.$neutral-light;
+    color: colors.$primary;
+}
+
+#logo {
+    margin: 0px 0px 0px 10px;
+}
+
+#login-btn {
+    margin: 0px 10px 0px 0px;
+}
+
+//////////////////////////////// GENERAL STYLE - SECTIONS ////////////////////////////////
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    min-height: 100vh;
+    flex: 1;
+}
+
+.section-title {
+    margin-top: 20px;
+}
+
+//////////////////////////////// GENERAL STYLE - SECTIONS ////////////////////////////////
+.hero {
+    flex-direction: row;
+    justify-content: center;
+    background: rgba(colors.$primary, 0.25);
+    //background-color: colors.$neutral-light;
+    h1 {
+        color: colors.$primary
+    }
+    color: colors.$neutral-dark;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 60px; 
+    max-width: 400px;
+    background-color: rgb(colors.$neutral-light, 0.7);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#myVideo{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}  
+
+
+//////////////////////////////// SECTION: FEATURES ///////////////////////////////////
+
+.features{
+    background-color: colors.$neutral-light;
+    h2 {
+        color: colors.$secondary;
+        padding-top: 40px;
+    }
+}
+
+.features-list {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.features-tile {
+    width: 20%;
+    padding: 20px;
+    min-width: 450px;
+}
+
+.li-ok, .li-ko {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.li-ko{
+    color: colors.$neutral-grey;
+}
+
+.li-ok::before {
+    content: '\2705';
+    color: green; 
+    margin-right: 5px; 
+}
+
+.li-ko::before {
+    content: '\274C';
+    color: red;
+    margin-right: 5px;
+}
+
+//////////////////////////////// SECTION : PRICING ///////////////////////////////////
+
+
+.pricing {
+    background-color: colors.$primary;
+    h2 {
+        color: colors.$neutral-light;
+        padding-top: 40px;
+    }
+    overflow: auto;
+}
+
+.pricing-list {
+    display: flex;
+    justify-content: center;
+    height: 100%; 
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    min-width: 300px;
+    width: 25%;
+    background-color: colors.$neutral-light;
+    border-radius: 10px;
+    max-height:500px;
+    -webkit-box-shadow: 24px 28px 62px -19px rgba(60,64,70,0.5);
+    -moz-box-shadow: 24px 28px 62px -19px rgba(60,64,70,0.5);
+    box-shadow: 24px 28px 62px -19px rgba(60,64,70,0.5);
+        h2{
+            color: colors.$secondary;
+            text-align: center;
+        }
+        ul{
+            height: 80%;
+        }
+}
+
+//////////////////////////////// SECTION: ABOUT ///////////////////////////////////
+
+.about {
+    background-color: colors.$neutral-light;
+    h2 {
+        color: colors.$primary;
+        padding-top: 40px;
+
+    }
+}
+
+.about-info {
+    display: flex;
+    flex: 1;
+    gap: 100px;
+    height: 70%;
+}
+
+#contact-form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#gMap {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+//////////////////////////////// FOOTER ///////////////////////////////////
+footer {
+    height: 50px;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    background-color: colors.$secondary;
+    h3 {
+        color: colors.$neutral-light
+    }
+    color: colors.$neutral-light;
+}
+
+//////////////////////////////// ANIMATION ////////////////////////////////

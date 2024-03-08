@@ -1,0 +1,51 @@
+@use "pages/index";
+@use "./variables/colors";
+@use "./variables/fonts";
+
+
+html,
+body {
+    height: 100svh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+h1 {
+    font-size: fonts.$font-xxl;
+    font-family: fonts.$font-titles;
+
+}
+
+h2 {
+    font-size: fonts.$font-xl;
+    font-family: fonts.$font-titles;
+
+}
+
+h3 {
+    font-size: fonts.$font-l;
+    font-family: fonts.$font-titles;
+
+}
+
+h4 {
+    font-size: fonts.$font-s;
+    font-family: fonts.$font-titles;
+
+}
+
+a, button {
+    font-family: fonts.$font-titles;
+}
+
+p, span, li {
+    font-size: fonts.$font-s;
+    font-family: fonts.$font-default;
+
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "otteraction",
+  "version": "1.0.0",
+  "description": "Otteraction software website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass:css"
+  },
+  "keywords": [
+    "Ticket",
+    "Software",
+    "SaaS",
+    "Online",
+    "Service",
+    "Process",
+    "Support"
+  ],
+  "author": "Quentin Lamare",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.71.1"
+  }
+}
