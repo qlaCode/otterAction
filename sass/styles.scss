@@ -18,34 +18,39 @@ body {
 h1 {
     font-size: fonts.$font-xxl;
     font-family: fonts.$font-titles;
-
+    letter-spacing: 4px;
 }
 
 h2 {
     font-size: fonts.$font-xl;
     font-family: fonts.$font-titles;
-
+    letter-spacing: 4px;
 }
 
 h3 {
     font-size: fonts.$font-l;
     font-family: fonts.$font-titles;
+    letter-spacing: 3px;
 
 }
 
 h4 {
     font-size: fonts.$font-s;
-    font-family: fonts.$font-titles;
+    font-family: fonts.$font-default;
+    letter-spacing: 2px;
 
 }
 
 a, button {
-    font-family: fonts.$font-titles;
+    font-family: fonts.$font-default;
+    letter-spacing: 1px;
 }
 
 p, span, li {
     font-size: fonts.$font-s;
     font-family: fonts.$font-default;
+    letter-spacing: 1px;
+    line-height: 1.8;
 
 }
 
