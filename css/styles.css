@@ -117,7 +117,7 @@ a:active {
   border: 1px solid rgba(255, 255, 255, 0.48);
 }
 .mobilebar a {
-  font-size: 32px;
+  font-size: 2rem;
   color: #14498e;
 }
 .mobilebar .nav-item {
@@ -125,23 +125,6 @@ a:active {
   justify-content: center;
 }
 
-@media (max-width: 800px) {
-  .fullscreen, #login-btn {
-    display: none;
-  }
-  #logo #title {
-    justify-content: center;
-  }
-  #hamb {
-    color: white;
-    fill: white;
-    display: block;
-    margin-right: 10px;
-  }
-  #hamb svg path {
-    fill: #F2F2F2;
-  }
-}
 section {
   display: flex;
   flex-direction: column;
@@ -151,15 +134,6 @@ section {
   padding: 0px 30px 0px 30px;
 }
 
-/* .section-title {
-    //padding spacing
-    //margin-top: 20px;
-} */
-@media (max-width: 1100px) {
-  section {
-    min-height: fit-content;
-  }
-}
 .hero {
   display: flex;
   flex-direction: row;
@@ -191,7 +165,7 @@ section {
 }
 
 #easy-accent {
-  font-size: 48px;
+  font-size: 3rem;
   font-family: "Caveat", cursive;
   letter-spacing: 4px;
   color: #3C4046;
@@ -214,15 +188,6 @@ section {
   z-index: -1;
 }
 
-@media (max-width: 1100px) {
-  .hero-content {
-    margin-top: 55px;
-    margin-bottom: 5px;
-    height: 80vh;
-    gap: 5px;
-    padding: 5px;
-  }
-}
 .features {
   background-color: #F2F2F2;
   flex-grow: auto;
@@ -343,6 +308,7 @@ section {
 
 .about {
   background-color: #F2F2F2;
+  margin-bottom: -26px;
 }
 .about h2 {
   color: #1663C7;
@@ -352,14 +318,12 @@ section {
 .about-info {
   flex-wrap: wrap;
   display: flex;
-  gap: 100px;
-  height: 70%;
+  gap: 50px;
 }
 
 .about-info div {
   display: flex;
   flex-direction: column;
-  min-width: 280px;
   flex: 1;
   margin: 5%;
 }
@@ -372,7 +336,6 @@ section {
 #gMap {
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 
 footer {
@@ -384,13 +347,49 @@ footer {
   gap: 30px;
   background-color: #FF6307;
   color: #F2F2F2;
-  margin-top: 200px;
   margin-bottom: 0px;
 }
 footer h3 {
   color: #F2F2F2;
 }
 
+@media (max-width: 1100px) {
+  section {
+    min-height: fit-content;
+  }
+}
+@media (max-width: 1100px) {
+  .hero-content {
+    margin-top: 55px;
+    margin-bottom: 5px;
+    gap: 2px;
+    padding: 5px;
+  }
+}
+@media (max-width: 800px) {
+  .fullscreen, #login-btn {
+    display: none;
+  }
+  #logo #title {
+    justify-content: center;
+  }
+  #hamb {
+    color: white;
+    fill: white;
+    display: block;
+    margin-right: 10px;
+  }
+  #hamb svg path {
+    fill: #F2F2F2;
+  }
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+}
 html,
 body {
   height: 100svh;
@@ -404,31 +403,31 @@ body {
 
 #title {
   font-family: "Caveat", cursive;
-  font-size: 32px;
+  font-size: 2rem;
   letter-spacing: 3px;
   margin: 2px 5px 2px 5px;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
   font-family: "Caveat", cursive;
   letter-spacing: 4px;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 3rem;
   font-family: "Caveat", cursive;
   letter-spacing: 4px;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 2rem;
   font-family: "Caveat", cursive;
   letter-spacing: 3px;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 0.9rem;
   font-family: "Mulish", sans-serif;
   letter-spacing: 2px;
   font-weight: 400;
@@ -440,7 +439,7 @@ a, button {
 }
 
 p, span, li {
-  font-size: 14px;
+  font-size: 0.9rem;
   font-family: "Mulish", sans-serif;
   letter-spacing: 1px;
   line-height: 1.8;

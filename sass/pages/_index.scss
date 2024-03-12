@@ -329,34 +329,30 @@ section {
         color: colors.$primary;
         padding-top: 40px;
     }
+    margin-bottom: -26px;
 }
 
 
 .about-info {
     flex-wrap: wrap;
     display: flex;
-    gap: 100px;
-    height: 70%;
+    gap: 50px;
 }
 
 .about-info div {
     @include shortcuts.flex-column;
-    min-width: 280px;
     flex: 1;
     margin: 5%;
 }
 
 
 #contact-form > * {
-        margin: 5px;
-        width: 80%;
+    margin: 5px;
+    width: 80%;
 }
 
 #gMap {
     @include shortcuts.flex-column;
-    flex: 1;
-    margin: 5px;
-
 }
 
 //////////////////////////////// FOOTER ///////////////////////////////////
@@ -372,7 +368,6 @@ footer {
         color: colors.$neutral-light
     }
     color: colors.$neutral-light;
-    margin-top: 200px;
     margin-bottom: 0px;
 }
 
@@ -388,11 +383,12 @@ footer {
 	.hero-content {
         margin-top: 55px;
         margin-bottom: 5px;
-        height: 80vh;   
-        gap: 5px; 
+        gap: 2px; 
         padding: 5px;
 	}
 }
+
+
 
 /////// MEDIA QUERY NAVBAR
 
@@ -413,5 +409,14 @@ footer {
          svg path {
         fill: colors.$neutral-light;
         }
-  }
+    }
+    
+    .about-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: fit-content;
+        margin-bottom: 50px;
+    }
+    
 }
