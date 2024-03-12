@@ -116,31 +116,6 @@ a:active {
         justify-content: center;
     }
 }
-
-/////// MEDIA QUERY NAVBAR
-
-@media (max-width: 800px){
-    .fullscreen, #login-btn {
-        display: none;   
-    }
-    
-    #logo #title {
-        justify-content: center;
-    }
-
-    #hamb {
-        color: white;
-        fill: white;
-        display: block;
-        margin-right: 10px;
-         svg path {
-        fill: colors.$neutral-light;
-        }
-
-
-  }
-
-}
     
 
 //////////////////////////////// GENERAL STYLE - SECTIONS ////////////////////////////////
@@ -151,22 +126,9 @@ section {
     //Sizing
     min-height: 100vh;
 
-//    flex: 1;
-
     //Spacing
     gap: 20px;
     padding: 0px 30px 0px 30px;
-}
-
-/* .section-title {
-    //padding spacing
-    //margin-top: 20px;
-} */
-
-@media (max-width: 1100px){
-	section {
-        min-height: fit-content;   
-	}
 }
 
 //////////////////////////////// HERO SECTION ////////////////////////////////
@@ -174,7 +136,6 @@ section {
     @include shortcuts.flex-row;
     justify-content: center;
     background: rgba(colors.$primary, 0.25);
-    //background-color: colors.$neutral-light;
     h1 {
         color: colors.$primary
     }
@@ -185,8 +146,6 @@ section {
     @include shortcuts.flex-column;
     align-items: center;
     text-align: center;
-    //background-color: rgb(colors.$neutral-light, 0.7);
-    //border-radius: 5px;
 
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.5);
@@ -236,16 +195,6 @@ section {
     left: 0;
     z-index: -1;
 }  
-
-@media (max-width: 1100px){
-	.hero-content {
-        margin-top: 55px;
-        margin-bottom: 5px;
-        height: 80vh;   
-        gap: 5px; 
-        padding: 5px;
-	}
-}
 
 //////////////////////////////// SECTION: FEATURES ///////////////////////////////////
 
@@ -406,6 +355,8 @@ section {
 #gMap {
     @include shortcuts.flex-column;
     flex: 1;
+    margin: 5px;
+
 }
 
 //////////////////////////////// FOOTER ///////////////////////////////////
@@ -425,4 +376,42 @@ footer {
     margin-bottom: 0px;
 }
 
-//////////////////////////////// PATTERNS ////////////////////////////////
+//////////////////////////////// MEDIA QUERIES ////////////////////////////////
+
+@media (max-width: 1100px){
+	section {
+        min-height: fit-content;   
+	}
+}
+
+@media (max-width: 1100px){
+	.hero-content {
+        margin-top: 55px;
+        margin-bottom: 5px;
+        height: 80vh;   
+        gap: 5px; 
+        padding: 5px;
+	}
+}
+
+/////// MEDIA QUERY NAVBAR
+
+@media (max-width: 800px){
+    .fullscreen, #login-btn {
+        display: none;   
+    }
+    
+    #logo #title {
+        justify-content: center;
+    }
+
+    #hamb {
+        color: white;
+        fill: white;
+        display: block;
+        margin-right: 10px;
+         svg path {
+        fill: colors.$neutral-light;
+        }
+  }
+}
