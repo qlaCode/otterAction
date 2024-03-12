@@ -15,6 +15,13 @@ body {
 }
 
 
+#title {
+    font-family: fonts.$font-titles;
+    font-size: fonts.$font-l;
+    letter-spacing: 3px;
+    margin: 2px 5px 2px 5px;
+}
+
 h1 {
     font-size: fonts.$font-xxl;
     font-family: fonts.$font-titles;
@@ -31,14 +38,13 @@ h3 {
     font-size: fonts.$font-l;
     font-family: fonts.$font-titles;
     letter-spacing: 3px;
-
 }
 
 h4 {
     font-size: fonts.$font-s;
     font-family: fonts.$font-default;
     letter-spacing: 2px;
-
+    font-weight: 400;
 }
 
 a, button {
@@ -51,6 +57,5 @@ p, span, li {
     font-family: fonts.$font-default;
     letter-spacing: 1px;
     line-height: 1.8;
-
 }
 

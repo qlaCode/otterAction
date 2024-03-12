@@ -18,7 +18,7 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
-navbar {
+nav {
   position: fixed;
   width: 100vw;
   background-color: #1663C7;
@@ -27,9 +27,10 @@ navbar {
   align-items: center;
   gap: 25px;
   height: 50px;
+  z-index: 998;
 }
 
-navbar li {
+nav li {
   list-style: none;
 }
 
@@ -40,6 +41,12 @@ navbar li {
   align-items: center;
   gap: 20px;
   height: 100%;
+}
+.nav-items #hamb-cross {
+  height: 35%;
+  justify-content: right;
+  align-items: center;
+  padding-right: 30px;
 }
 
 .nav-item {
@@ -80,14 +87,61 @@ a:active {
   color: #1663C7;
 }
 
+#title {
+  color: #F2F2F2;
+  text-align: center;
+}
+
 #logo {
   margin: 0px 0px 0px 10px;
+  min-width: 50px;
 }
 
 #login-btn {
   margin: 0px 10px 0px 0px;
 }
 
+.mobilebar {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  top: -15px;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+}
+.mobilebar a {
+  font-size: 32px;
+  color: #14498e;
+}
+.mobilebar .nav-item {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .fullscreen, #login-btn {
+    display: none;
+  }
+  #logo #title {
+    justify-content: center;
+  }
+  #hamb {
+    color: white;
+    fill: white;
+    display: block;
+    margin-right: 10px;
+  }
+  #hamb svg path {
+    fill: #F2F2F2;
+  }
+}
 section {
   display: flex;
   flex-direction: column;
@@ -122,12 +176,32 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: rgba(242, 242, 242, 0.7);
-  border-radius: 5px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  z-index: 0;
+  border: 1px solid rgba(255, 255, 255, 0.48);
   max-width: 400px;
   margin-top: 40px;
   gap: 20px;
   padding: 30px;
+}
+
+#easy-accent {
+  font-size: 48px;
+  font-family: "Caveat", cursive;
+  letter-spacing: 4px;
+  color: #3C4046;
+  margin: 0 -0.1em;
+  padding: 0.005em 0.2em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(to right, rgba(255, 225, 0, 0.1), rgba(255, 225, 0, 0.7) 4%, rgba(255, 225, 0, 0.3));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 #myVideo {
@@ -140,6 +214,15 @@ section {
   z-index: -1;
 }
 
+@media (max-width: 1100px) {
+  .hero-content {
+    margin-top: 55px;
+    margin-bottom: 5px;
+    height: 80vh;
+    gap: 5px;
+    padding: 5px;
+  }
+}
 .features {
   background-color: #F2F2F2;
   flex-grow: auto;
@@ -161,30 +244,20 @@ section {
   width: 20%;
   padding: 20px;
   min-width: 450px;
+  display: flex;
+}
+.features-tile h4 {
+  margin: -20px 0px 20px 0px;
 }
 
-.li-ok, .li-ko {
-  list-style: none;
-  margin-top: 5px;
-}
-
-.li-ko {
-  color: grey;
-}
-
-.li-ok::before {
-  content: "✅";
-  color: green;
-  margin-right: 5px;
-}
-
-.li-ko::before {
-  content: "❌";
-  color: red;
-  margin-right: 5px;
+.features-tile:hover h3,
+.features-tile:hover i {
+  color: #1663C7;
+  transform: scale(1.03);
 }
 
 .pricing {
+  background: linear-gradient(180deg, #1663C7 100%, #14498e 50%);
   background-color: #1663C7;
 }
 .pricing h2 {
@@ -221,6 +294,51 @@ section {
 }
 .pricing-tile ul {
   height: 80%;
+}
+
+.li-ok, .li-ko {
+  list-style: none;
+  margin-top: 5px;
+}
+
+.li-ko {
+  color: grey;
+}
+
+.li-ok::before {
+  content: "✅";
+  color: green;
+  margin-right: 5px;
+}
+
+.li-ko::before {
+  content: "❌";
+  color: red;
+  margin-right: 5px;
+}
+
+.pricing-tile:hover {
+  rotate: -1deg;
+  transform: scale(1.03);
+  color: #F2F2F2;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  transition: all 0.15s ease-in-out;
+  /*   background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath fill=%22%23f8fafd%22 d=%22M0 0h2000v1000H0z%22%2F%3E%3Cpath d=%22M0 83h0c105.304-5.013 210.607-10.027 302-8 91.393 2.027 168.875 11.094 260 14 91.125 2.906 195.893-.348 291-4s180.555-7.7 273-7c92.445.7 191.89 6.15 289 8 97.11 1.85 191.889.1 289-1 97.111-1.1 196.556-1.55 336-2%22 fill=%22none%22 stroke=%22%23d8e5f5%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 166h0c103.534 1.184 207.069 2.368 302 1 94.931-1.368 181.26-5.286 269-5 87.74.286 176.895 4.778 272 5 95.105.222 196.162-3.827 290-2s180.456 9.53 279 10c98.544.47 209.012-6.294 309-9 99.988-2.706 189.494-1.353 319 0%22 fill=%22none%22 stroke=%22%23e6eef8%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 250h0c98.4 2.16 196.799 4.319 288 7s175.204 5.884 272 2c96.796-3.884 206.385-14.856 306-18 99.615-3.144 189.258 1.539 281 5 91.742 3.461 185.584 5.701 281 5 95.416-.701 192.404-4.343 288-5s189.798 1.672 324 4%22 fill=%22none%22 stroke=%22%23dee9f7%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 333h0c86.867 1.277 173.733 2.554 272-1s207.934-11.94 311-9c103.066 2.94 199.532 17.208 289 19 89.468 1.792 171.94-8.89 264-11 92.06-2.11 193.708 4.355 294 5 100.292.645 199.226-4.53 294-6 94.774-1.47 185.387.765 316 3%22 fill=%22none%22 stroke=%22%23e3ecf8%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 416h0c84.183-1.72 168.366-3.44 269-5 100.634-1.56 217.72-2.957 320-3 102.28-.043 189.758 1.27 276 5 86.242 3.73 171.25 9.876 263 8 91.75-1.876 190.24-11.774 288-14 97.76-2.226 194.789 3.221 292 6 97.211 2.779 194.606 2.89 332 3%22 fill=%22none%22 stroke=%22%23d2e1f4%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 499h0c98.624-3.531 197.248-7.063 295-7 97.752.063 194.632 3.72 284 7s171.226 6.183 262 5c90.774-1.183 190.465-6.451 292-5 101.535 1.451 204.913 9.621 306 9 101.087-.621 199.882-10.035 293-13s180.559.517 308 4%22 fill=%22none%22 stroke=%22%23d4e2f4%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 583h0c88.754 2.213 177.508 4.426 275 5 97.492.574 203.723-.49 301-1 97.277-.51 185.602-.462 279-3s191.87-7.66 286-7c94.13.66 183.92 7.1 275 7 91.08-.1 183.452-6.743 281-8 97.548-1.257 200.274 2.872 343 7%22 fill=%22none%22 stroke=%22%23dde8f6%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 666h0c96.837 5.735 193.674 11.47 287 10 93.326-1.47 183.14-10.144 277-16 93.86-5.856 191.763-8.895 293-4s205.806 17.724 302 18c96.194.276 184.014-12.003 279-15 94.986-2.997 197.139 3.286 292 6 94.861 2.714 182.43 1.857 310 1%22 fill=%22none%22 stroke=%22%23e8eff9%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 750h0c94.704-1.454 189.409-2.908 282 0 92.591 2.908 183.069 10.177 284 9 100.931-1.177 212.316-10.799 305-13 92.684-2.201 166.668 3.018 255 4 88.332.982 191.012-2.274 295-1s209.282 7.078 306 8c96.718.922 184.859-3.04 313-7%22 fill=%22none%22 stroke=%22%23c2d6f0%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 833h0c99.636-2.914 199.272-5.828 296-8 96.728-2.172 190.547-3.604 283-2s183.538 6.242 279 7c95.462.758 195.299-2.364 290-1 94.701 1.364 184.266 7.213 278 7 93.734-.213 191.638-6.49 288-8 96.362-1.51 191.18 1.745 326 5M0 916h0c91.19 2.953 182.38 5.906 282 3 99.62-2.906 207.669-11.67 304-10 96.331 1.67 180.945 13.776 271 14 90.055.224 185.55-11.435 284-14 98.45-2.565 199.852 3.963 297 7s190.042 2.582 283 2c92.958-.582 185.979-1.291 319-2%22 fill=%22none%22 stroke=%22%23bed3ef%22 stroke-width=%224%22 stroke-linecap=%22round%22%2F%3E%3C%2Fsvg%3E"); */
+}
+.pricing-tile:hover .li-ko {
+  color: #F2F2F2;
+}
+.pricing-tile:hover button {
+  color: #F2F2F2;
+  border-color: #F2F2F2;
+  background-color: #1663C7;
 }
 
 .about {
@@ -280,6 +398,13 @@ body {
   scroll-behavior: smooth;
 }
 
+#title {
+  font-family: "Caveat", cursive;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin: 2px 5px 2px 5px;
+}
+
 h1 {
   font-size: 64px;
   font-family: "Caveat", cursive;
@@ -302,6 +427,7 @@ h4 {
   font-size: 14px;
   font-family: "Mulish", sans-serif;
   letter-spacing: 2px;
+  font-weight: 400;
 }
 
 a, button {
