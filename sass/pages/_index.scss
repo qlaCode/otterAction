@@ -272,7 +272,7 @@ section {
     @include shortcuts.flex-column;
     width: 20%;
     padding: 20px;
-    min-width: 450px;
+    min-width: 370px;
     display: flex;
     h4 {
         margin: -20px 0px 20px 0px;
@@ -392,7 +392,9 @@ section {
 
 .about-info div {
     @include shortcuts.flex-column;
+    min-width: 280px;
     flex: 1;
+    margin: 5%;
 }
 
 
@@ -419,6 +421,8 @@ footer {
         color: colors.$neutral-light
     }
     color: colors.$neutral-light;
+    margin-top: 200px;
+    margin-bottom: 0px;
 }
 
 //////////////////////////////// PATTERNS ////////////////////////////////
