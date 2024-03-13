@@ -42,7 +42,7 @@
         </div>
 
         <video autoplay muted loop id="myVideo">
-            <source src="./assets/videos/pexels_videos_1918465_540p.mp4" type="video/mp4">
+            <source src="./assets/videos/pexels_videos_1918465_540p.mp4" type="video/mp4" controls controlslist:"nofullscreen">
         </video>
 
     </section>
@@ -67,14 +67,15 @@
                 <ul>
                     <li class="li-ok">Easy User Experience</li>
                     <li class="li-ok">Quick Ticket Creation</li>
-                    <li class="li-ok">Portal for your customers</li>
                     <li class="li-ok">Clear support process</li>
                     <li class="li-ok">File Attachments</li>
                     <li class="li-ok">Search and Filter</li>
-                    <li class="li-ko">Automation Rules</li>
+                    <li class="li-ok">Email Notifications</li>
+                    <li class="li-ko">Portal for your customers</li>
                     <li class="li-ko">Salesforce Integration</li>
-                    <li class="li-ko">Premier Support</li>
+                    <li class="li-ko">Customer Support</li>                    
                 </ul>
+                <h3>Free!</h3>
                 <button class="button-secondary">Create Account</button>
             </div>
             <div class="pricing-tile"><p>Plan 2</p>
@@ -82,14 +83,15 @@
                 <ul>
                     <li class="li-ok">Easy User Experience</li>
                     <li class="li-ok">Quick Ticket Creation</li>
-                    <li class="li-ok">Portal for your customers</li>
                     <li class="li-ok">Clear support process</li>
                     <li class="li-ok">File Attachments</li>
                     <li class="li-ok">Search and Filter</li>
-                    <li class="li-ok">Automation Rules</li>
+                    <li class="li-ok">Email Notifications</li>
+                    <li class="li-ok">Portal for your customers</li>
                     <li class="li-ok">Salesforce Integration</li>
-                    <li class="li-ok">Premier Support</li>
+                    <li class="li-ok">Customer Support</li>
                 </ul>
+                <h3>4.90€/month/user</h3>
                 <button class="button-secondary">Create Account</button></div>
             <div class="pricing-tile"><p>Plan 3</p>
                 <h3>Ambitious Plan</h3>
@@ -103,21 +105,23 @@
     <!-- SECTION 5 : ABOUT -->
     <section class="about" id="about">
         <h2 class="section-title">About</h2>
-        <div class="about-info">
-            <div id="who-we-are">
-                <h4>Who we are</h4>
+        <div class="info-list">
+            <div id="who-we-are" class="info-tile">
+                <h3>Who we are</h3>
                 <p>We are a startup company founded in 2023. We, founders, are experienced IT professional operating in Switzerland as a small team. Our goal : your success with our software solution!</p>
             </div>
             <div >
-                <h4>Contact Us</h4>
-                <form id="contact-form" action="submit">
+                <h3>Contact Us</h3>
+                <form id="contact-form" class="info-tile" action="submit">
                     <input type="text" placeholder="Subject"></input>
                     <input type="email" placeholder="Your Email"></input>
                     <input style="height: 50px;  padding: 0px 2px 50px 2px;" type="text" placeholder="Description"></input>
                     <input type="submit" class="button-secondary"></input>
                 </form>
             </div>
-            <div id="gMap"><h4>Map</h4><p>otterAction, Bahnhofstrasse 77, 8001 Zürich</p>
+            <div id="gMap" class="info-tile">
+                <h3>Map</h3>
+                <p>otterAction, Bahnhofstrasse 77, 8001 Zürich</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.891997713197!2d8.536038376388047!3d47.37502637116962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a0643b35993%3A0xbd2adc77b9dcad94!2sBahnhofstrasse%2077%2C%208001%20Z%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2sfr!4v1709897634357!5m2!1sen!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
