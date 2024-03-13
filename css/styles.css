@@ -373,6 +373,10 @@ footer h3 {
   .pricing-tile {
     flex-basis: 100%;
   }
+  .pricing-tile:hover {
+    rotate: 0deg;
+    transform: scale(1);
+  }
   .info-list {
     display: flex;
     flex-direction: column;

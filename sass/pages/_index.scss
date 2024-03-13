@@ -471,6 +471,11 @@ footer {
     .pricing-tile {
        flex-basis: 100%;
     }
+
+    .pricing-tile:hover{
+        rotate: 0deg;
+        transform: scale(1);
+    }
     
     .info-list {
         // Flex
