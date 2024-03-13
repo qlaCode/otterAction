@@ -47,6 +47,7 @@ nav li {
   justify-content: right;
   align-items: center;
   padding-right: 30px;
+  padding-top: 30px;
 }
 
 .nav-item {
@@ -103,13 +104,13 @@ a:active {
 
 .mobilebar {
   display: none;
-  position: fixed;
   flex-direction: column;
-  top: -15px;
+  position: fixed;
+  z-index: 999;
   right: 0;
+  top: 0;
   height: 100svh;
   width: 100%;
-  z-index: 999;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.1px);
@@ -355,12 +356,15 @@ footer h3 {
   }
   .hero-content {
     justify-content: space-evenly;
+    min-height: 90vh;
+    max-height: 100svh;
     margin-top: 55px;
     margin-bottom: 5px;
     gap: 2px;
     padding: 5px;
-    min-height: 90vh;
-    max-height: 100svh;
+  }
+  .hero-content #title {
+    display: none;
   }
   .features-tile {
     row-gap: 30px;
@@ -373,8 +377,8 @@ footer h3 {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
-    gap: 10px;
     height: fit-content;
+    gap: 10px;
     margin-bottom: 50px;
   }
   footer {

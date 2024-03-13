@@ -32,6 +32,7 @@ nav li {
             justify-content: right;
             align-items: center;
             padding-right: 30px;
+            padding-top: 30px;
         }
 }
 
@@ -90,14 +91,28 @@ a:active {
 //////////////////////////////// MOBILE NAV BAR ////////////////////////////////
 
 .mobilebar {
+    
+    //default
     display: none;
-    position: fixed;
+
+    // Flex
     flex-direction: column;
-    top: -15px; 
+    position: fixed;
+    z-index: 999;
     right: 0;
+    top: 0;
+
+    // Alignment
+
+    // Sizing
     height: 100svh; 
     width: 100%; 
-    z-index: 999;
+
+    // Spacing
+
+    // Other
+    
+
     //glass
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -423,16 +438,27 @@ footer {
         row-gap: 30px;
 	}
 
-
 	.hero-content {
-       // height: fit-content;
+        // Flex
+
+        // Alignment
         justify-content: space-evenly;
+
+        // Sizing
+        min-height: 90vh;
+        max-height: 100svh;
+        // height: fit-content;
+
+        // Spacing
         margin-top: 55px;
         margin-bottom: 5px;
         gap: 2px; 
         padding: 5px;
-        min-height: 90vh;
-        max-height: 100svh;
+
+        // Other
+        #title {
+            display: none;
+        }
 	}
 
 
@@ -447,11 +473,20 @@ footer {
     }
     
     .info-list {
+        // Flex
         @include shortcuts.flex-column;
+
+        // Alignment
+
+        // Sizing
         flex-basis: 100%;
-        gap: 10px;
         height: fit-content;
+
+        // Spacing
+        gap: 10px;
         margin-bottom: 50px;
+
+        // Other
     }
     
     footer {
