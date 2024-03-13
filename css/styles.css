@@ -139,6 +139,8 @@ section {
 .hero {
   background: rgba(22, 99, 199, 0.25);
   color: #3C4046;
+  position: relative;
+  padding: 0;
 }
 .hero h1 {
   color: #1663C7;
@@ -178,12 +180,10 @@ section {
 }
 
 #myVideo {
+  position: absolute;
   object-fit: cover;
   width: 100vw;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: -1;
 }
 
@@ -361,9 +361,9 @@ footer h3 {
     margin-top: 55px;
     margin-bottom: 5px;
     gap: 2px;
-    padding: 5px;
+    padding: 3px;
   }
-  .hero-content #title {
+  .hero-content h1 {
     display: none;
   }
   .features-tile {
