@@ -1,0 +1,57 @@
+@use "../variables/colors";
+@use "../variables/fonts";
+@use "../components/buttons";
+@use "../utils/shortcuts";
+
+
+.mainContainer {
+background-color: colors.$neutral-light;
+    align-items: center;
+    padding-top: 100px;
+    gap: 30px;
+}
+
+h2 {
+    color: colors.$secondary;
+}
+
+#ticket-form {
+    background-color: colors.$primary;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid colors.$neutral-grey;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 40vw;
+    min-width: 40vw;
+}
+
+label {
+    width: 100%;
+    color: colors.$neutral-light;
+}
+
+
+input, textarea {
+    width: auto;
+}
+
+button {
+    width: auto;
+    margin: 10px auto 10px auto;
+}
+
+.ticket-list-container{
+    background-color: colors.$primary;
+    border: 1px solid colors.$neutral-grey;
+    border-radius: 5px;
+    color: colors.$neutral-light;
+    padding: 10px;
+    max-width: 40%;
+    min-width: 40%;
+}
+
+#listOfTickets {
+    list-style-type: '- ';
+    padding-left: 10px;
+}

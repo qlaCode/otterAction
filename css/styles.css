@@ -108,8 +108,8 @@ a:active {
   position: fixed;
   z-index: 999;
   right: 0;
-  top: 0;
-  height: 100svh;
+  top: 50px;
+  height: 95svh;
   width: 100%;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -323,7 +323,7 @@ section {
   gap: 15px;
 }
 
-#contact-form > * {
+form > * {
   margin: 5px;
   width: 100%;
 }
@@ -398,16 +398,165 @@ footer h3 {
   #logo #title {
     justify-content: center;
   }
-  #hamb {
-    color: white;
-    fill: white;
+  .hamburger {
     display: block;
     margin-right: 10px;
   }
-  #hamb svg path {
-    fill: #F2F2F2;
-  }
+  /*     #hamb {
+          color: white;
+          fill: white;
+          display: block;
+          margin-right: 10px;
+           svg path {
+          fill: colors.$neutral-light;
+          }
+      } */
 }
+.mainContainer {
+  background-color: #F2F2F2;
+  align-items: center;
+  padding-top: 100px;
+  gap: 30px;
+}
+
+h2 {
+  color: #FF6307;
+}
+
+#ticket-form {
+  background-color: #1663C7;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 40vw;
+  min-width: 40vw;
+}
+
+label {
+  width: 100%;
+  color: #F2F2F2;
+}
+
+input, textarea {
+  width: auto;
+}
+
+button {
+  width: auto;
+  margin: 10px auto 10px auto;
+}
+
+.ticket-list-container {
+  background-color: #1663C7;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: #F2F2F2;
+  padding: 10px;
+  max-width: 40%;
+  min-width: 40%;
+}
+
+#listOfTickets {
+  list-style-type: "- ";
+  padding-left: 10px;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #F2F2F2;
+}
+
+.hamburger-box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 35px;
+  height: 4px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+ * Stand
+ */
+.hamburger--stand .hamburger-inner {
+  transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color 0s 0.075s linear;
+}
+.hamburger--stand .hamburger-inner::before {
+  transition: top 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--stand .hamburger-inner::after {
+  transition: bottom 0.075s 0.075s ease-in, transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--stand.is-active .hamburger-inner {
+  transform: rotate(90deg);
+  background-color: transparent !important;
+  transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear;
+}
+.hamburger--stand.is-active .hamburger-inner::before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: top 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--stand.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: bottom 0.075s 0.1s ease-out, transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 html,
 body {
   height: 100svh;
@@ -460,7 +609,7 @@ a, button {
   letter-spacing: 1px;
 }
 
-p, span, li {
+p, span, li, label {
   font-size: 0.9rem;
   font-family: "Mulish", sans-serif;
   letter-spacing: 1px;

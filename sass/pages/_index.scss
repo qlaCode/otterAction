@@ -100,12 +100,12 @@ a:active {
     position: fixed;
     z-index: 999;
     right: 0;
-    top: 0;
+    top: 50px;
 
     // Alignment
 
     // Sizing
-    height: 100svh; 
+    height: 95svh; 
     width: 100%; 
 
     // Spacing
@@ -205,6 +205,7 @@ section {
     );
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+  
 }
 
 #myVideo{
@@ -404,7 +405,7 @@ section {
 }
 
 
-#contact-form > * {
+form > * {
     margin: 5px;
     width: 100%;
 }
@@ -513,7 +514,12 @@ footer {
         justify-content: center;
     }
 
-    #hamb {
+    .hamburger{
+        display: block;
+        margin-right: 10px;
+    }
+
+/*     #hamb {
         color: white;
         fill: white;
         display: block;
@@ -521,5 +527,5 @@ footer {
          svg path {
         fill: colors.$neutral-light;
         }
-    }
+    } */
 }

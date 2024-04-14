@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otterAction</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/239bc293aa.js" crossorigin="anonymous"></script> 
+    <script src="./script.js"></script>
+</head>
+</head>
+<body>
+<div class="mainContainer"></div>
+    <h2>Create a new ticket</h2>
+    <form id="ticket-form">
+        <label for="inputEmail">Email</label>
+            <input type="email" id="inputEmail">
+        <label for="inputTitle">Title</label>
+            <input type="text" id="inputTitle" required>
+        <label for="inputDescription">Description</label>
+            <textarea type="text" id="inputDescription"></textarea>
+        <button type="button" onclick="addTicket()">Create New Ticket</button>
+    </form>
+    <h2>Ticket List</h2>
+    <div class="ticket-list-container">
+        <ul id="listOfTickets">
+<!--             <li>Ticket 1</li>
+            <li>Ticket 2</li>
+            <li>Ticket 3</li> -->
+        </ul>
+    </div>
+</body>
+</html>

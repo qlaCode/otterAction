@@ -1,6 +1,8 @@
 @use "pages/index";
+@use "pages/tickets";
 @use "./variables/colors";
 @use "./variables/fonts";
+@import "./hamb/hamburgers.scss";
 
 
 html,
@@ -56,7 +58,7 @@ a, button {
     letter-spacing: 1px;
 }
 
-p, span, li {
+p, span, li, label {
     font-size: fonts.$font-s;
     font-family: fonts.$font-default;
     letter-spacing: 1px;
