@@ -219,7 +219,8 @@ section {
 //////////////////////////////// SECTION: FEATURES ///////////////////////////////////
 
 .features {
-    background-color: colors.$neutral-light;
+    background-image: url(../assets/images/light-background.svg);
+    background-size: cover; 
     h2 {
         color: colors.$secondary;
         padding-top: 40px;
@@ -268,8 +269,8 @@ section {
 
 
 .pricing {
-    background: linear-gradient(180deg, colors.$primary 100%, colors.$primary-dark 50%);
-    background-color: colors.$primary;
+    background-image: url(../assets/images/dark-backgound.svg);
+    background-size: cover; 
     h2 {
         color: colors.$neutral-light;
         padding-top: 40px;
@@ -371,8 +372,9 @@ section {
 
 //////////////////////////////// SECTION: ABOUT ///////////////////////////////////
 
-.about {
-    background-color: colors.$neutral-light;
+.about { 
+    background-image: url(../assets/images/light-background2.svg);
+    background-size: cover; 
     h2 {
         color: colors.$primary;
         padding-top: 40px;
@@ -416,7 +418,7 @@ form > * {
 
 //////////////////////////////// FOOTER ///////////////////////////////////
 footer {
-    height: 50px;
+    height: 5svh;
     display: flex;
     width: 100vw;
     align-items: center;
@@ -518,14 +520,6 @@ footer {
         display: block;
         margin-right: 10px;
     }
-
-/*     #hamb {
-        color: white;
-        fill: white;
-        display: block;
-        margin-right: 10px;
-         svg path {
-        fill: colors.$neutral-light;
-        }
-    } */
 }
+
+

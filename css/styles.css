@@ -10,12 +10,26 @@
 }
 
 .button-secondary {
+  color: #fff;
+  text-align: center;
   border-radius: 30px;
-  border-style: none;
-  color: #F2F2F2;
-  border-color: #F2F2F2;
-  background-color: #FF6307;
+  border: none;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  background-size: 300% 100%;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-secondary:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-secondary.button-effect {
+  background-image: linear-gradient(to right, #fec322, #e43603, #FF6307, #FF6307);
 }
 
 nav {
@@ -188,7 +202,8 @@ section {
 }
 
 .features {
-  background-color: #F2F2F2;
+  background-image: url(../assets/images/light-background.svg);
+  background-size: cover;
 }
 .features h2 {
   color: #FF6307;
@@ -218,8 +233,8 @@ section {
 }
 
 .pricing {
-  background: linear-gradient(180deg, #1663C7 100%, #14498e 50%);
-  background-color: #1663C7;
+  background-image: url(../assets/images/dark-backgound.svg);
+  background-size: cover;
 }
 .pricing h2 {
   color: #F2F2F2;
@@ -302,7 +317,8 @@ section {
 }
 
 .about {
-  background-color: #F2F2F2;
+  background-image: url(../assets/images/light-background2.svg);
+  background-size: cover;
   margin-bottom: -26px;
 }
 .about h2 {
@@ -334,7 +350,7 @@ form > * {
 }
 
 footer {
-  height: 50px;
+  height: 5svh;
   display: flex;
   width: 100vw;
   align-items: center;
@@ -402,15 +418,6 @@ footer h3 {
     display: block;
     margin-right: 10px;
   }
-  /*     #hamb {
-          color: white;
-          fill: white;
-          display: block;
-          margin-right: 10px;
-           svg path {
-          fill: colors.$neutral-light;
-          }
-      } */
 }
 .mainContainer {
   background-color: #F2F2F2;

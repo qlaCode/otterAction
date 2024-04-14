@@ -11,10 +11,31 @@
 }
 
 .button-secondary {
+    color: #fff;
+    text-align: center;
     border-radius: 30px;
-    border-style: none;
-    color: colors.$neutral-light;
-    border-color: colors.$neutral-light;
-    background-color: colors.$secondary;
+    border: none;
     padding: 0.5rem 1rem 0.5rem 1rem;
-}
+    background-size: 300% 100%;
+    -o-transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  
+  .button-secondary:hover {
+    background-position: 100% 0;
+    -o-transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  
+  
+  .button-secondary.button-effect {
+    background-image: linear-gradient(
+      to right,
+      #fec322,
+      #e43603,
+      colors.$secondary,
+      colors.$secondary
+    );
+  }
