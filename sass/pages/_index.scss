@@ -153,6 +153,7 @@ section {
 
     // Spacing
     padding: 15px 20vw;
+    margin: 0;
 
     .section-title{
         height: 20px;
@@ -411,18 +412,23 @@ section {
 
 .info-tile {
     flex: 1;
+    min-width: 250px;
     max-width: 400px;
     gap: 15px;
 }
 
 
 form > * {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin: 5px;
     width: 100%;
 }
 
 #gMap {
     @include shortcuts.flex-column;
+    margin-bottom: 10px;
 }
 
 //////////////////////////////// FOOTER ///////////////////////////////////
@@ -525,6 +531,10 @@ footer {
     #logo #title {
         justify-content: center;
     }
+
+    .section-title{
+        margin-bottom: 30px;;
+    }    
 
     .hamburger{
         display: block;

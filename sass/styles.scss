@@ -47,15 +47,18 @@ h3 {
 }
 
 h4 {
-    font-size: fonts.$font-s;
+    font-size: fonts.$font-m;
     font-family: fonts.$font-default;
     letter-spacing: 2px;
+    line-height: normal;
     font-weight: 400;
 }
 
 a, button {
     font-family: fonts.$font-default;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-size: fonts.$font-m;
+
 }
 
 p, span, li, label {
