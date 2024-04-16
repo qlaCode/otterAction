@@ -1,16 +1,27 @@
 // NAVBAR INDEX
 
 document.addEventListener("DOMContentLoaded", () => {
-
-const hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("is-active");
+    const hamburger = document.querySelector(".hamburger");
     const mobilebar = document.querySelector('.mobilebar');
-    if(mobilebar.style.display === 'none' || mobilebar.style.display === ''){
-        mobilebar.style.display = 'flex';
-    } else (mobilebar.style.display = 'none')
+
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("is-active");
+        const mobilebar = document.querySelector('.mobilebar');
+        if(mobilebar.style.display === 'none' || mobilebar.style.display === ''){
+            mobilebar.style.display = 'flex';
+        } else (mobilebar.style.display = 'none')
+    });
+
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+    mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            mobilebar.style.display = 'none';
+            hamburger.classList.remove("is-active");
+        });
     });
 });
+
 
 // TICKET MANAGEMENT
 
